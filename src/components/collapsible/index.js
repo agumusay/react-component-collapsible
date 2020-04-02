@@ -32,10 +32,10 @@ class Collapsible extends React.Component {
   render() {
     return (
       <li onClick={this.handleClick} className={this.state.color}>
-        <button>
+        <div className="title">
           {this.props.data.question}
           <img src="" alt="" className={this.state.open ? "turn-up" : ""} />
-        </button>
+        </div>
         <p className={this.state.open ? "open" : ""}>{this.props.data.answer}</p>
       </li>
     );
