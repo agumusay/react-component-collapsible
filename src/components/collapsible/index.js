@@ -6,9 +6,9 @@ class Collapsible extends React.Component {
     this.state = {
       open: false
     };
-    console.log(this.state.open);
+
     this.handleClick = this.handleClick.bind(this);
-    
+
     this.color = () => {
       let colorString = "";
       switch (true) {
