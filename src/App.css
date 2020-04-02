@@ -1,38 +1,81 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  object-fit: cover;
+  background-image: url("./img/down-arrow.svg");
+  transition: all 0.2s ease-out;
+}
 .App {
-  text-align: center;
+  width: 60%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px;
+}
+p {
+  width: 90%;
+  padding: 20px 20px;
+  font-size: 0.8rem;
+  transform-origin: top;
+  height: 100%;
+  display: none;
+}
+.open {
+  display: block;
+}
+.turn-up {
+  transform: rotateX(180deg);
 }
 
-.App-link {
-  color: #61dafb;
+.green button {
+  background-color: rgb(134, 216, 148);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.green {
+  background-color: rgb(210, 255, 217);
+}
+
+.orange button {
+  background-color: rgb(255, 192, 121);
+}
+
+.orange {
+  background-color: rgb(255, 225, 190);
+}
+
+.gray button {
+  background-color: rgb(179, 179, 179);
+}
+.gray {
+  background-color: rgb(218, 218, 218);
 }
