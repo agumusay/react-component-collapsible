@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.scss";
 import datas from "./data/data.json";
 import Collapsible from "./components/collapsible";
 
