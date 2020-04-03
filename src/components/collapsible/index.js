@@ -3,24 +3,42 @@ import React from "react";
 class Collapsible extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      color: "",
+      color: "gray",
       open: false
     };
 
+    this.category = this.props.data.category;
+
     this.handleClick = this.handleClick.bind(this);
 
-    switch (true) {
-      case this.props.data.category === "admin":
-        this.state.color = "orange";
-        break;
-      case this.props.data.category === "marketing":
-        this.state.color = "green";
-        break;
-      default:
-        this.state.color = "gray";
-        break;
-    }
+    // ****** With Single Line If Statements ******
+    if (this.category === "admin") this.state.color = "orange";
+    if (this.category === "marketing") this.state.color = "green";
+
+    // ****** With Logical operators ******
+    // (this.category === "admin" && (this.state.color = "orange")) ||
+    //   (this.category === "marketing" && (this.state.color = "green"));
+
+    // ****** With Ternary operators ******
+    // this.category === "admin"
+    //   ? (this.state.color = "orange")
+    //   : this.category === "marketing"
+    //   ? (this.state.color = "green")
+    //   : (this.state.color = this.state.color);
+
+    // ****** With Switch Statement ******
+    // switch (true) {
+    //   case this.category === "admin":
+    //     this.state.color = "orange";
+    //     break;
+    //   case this.category === "marketing":
+    //     this.state.color = "green";
+    //     break;
+    //   default:
+    //     break;
+    // }
   }
 
   handleClick() {
