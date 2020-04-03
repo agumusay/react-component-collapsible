@@ -52,7 +52,7 @@ class Collapsible extends React.Component {
       <li onClick={this.handleClick} className={this.state.color}>
         <div className="title">
           {this.props.data.question}
-          <img src="" alt="" className={this.state.open ? "turn-up" : ""} />
+          <img src="" alt="" className={this.state.open ? "flip" : ""} />
         </div>
         <p className={this.state.open ? "open" : ""}>{this.props.data.answer}</p>
       </li>

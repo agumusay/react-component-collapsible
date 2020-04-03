@@ -58,7 +58,7 @@ p {
 .open {
   display: block;
 }
-.turn-up {
+.flip {
   transform: rotateX(180deg);
 }
 
